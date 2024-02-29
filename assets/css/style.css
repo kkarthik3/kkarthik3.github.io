@@ -533,7 +533,7 @@ section {
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
-.resume .resume-title {
+.edu .edu-title {
   font-size: 26px;
   font-weight: 700;
   margin-top: 20px;
@@ -541,14 +541,14 @@ section {
   color: #45505b;
 }
 
-.resume .resume-item {
+.edu .edu-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
   border-left: 2px solid #0563bb;
   position: relative;
 }
 
-.resume .resume-item h4 {
+.edu .edu-item h4 {
   line-height: 18px;
   font-size: 18px;
   font-weight: 600;
@@ -558,7 +558,7 @@ section {
   margin-bottom: 10px;
 }
 
-.resume .resume-item h5 {
+.edu .edu-item h5 {
   font-size: 16px;
   background: #f7f8f9;
   padding: 5px 15px;
@@ -567,19 +567,19 @@ section {
   margin-bottom: 10px;
 }
 
-.resume .resume-item ul {
+.edu .edu-item ul {
   padding-left: 20px;
 }
 
-.resume .resume-item ul li {
+.edu .edu-item ul li {
   padding-bottom: 10px;
 }
 
-.resume .resume-item:last-child {
+.edu .edu-item:last-child {
   padding-bottom: 0;
 }
 
-.resume .resume-item::before {
+.edu .edu-item::before {
   content: "";
   position: absolute;
   width: 16px;
