@@ -1095,7 +1095,9 @@ section {
 
 .contact .info .email:hover i,
 .contact .info .address:hover i,
-.contact .info .phone:hover i {
+.contact .info .phone:hover i,
+.contact .info .github:hover i
+ {
   background: #0563bb;
   color: #fff;
 }
