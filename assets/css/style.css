@@ -1228,6 +1228,7 @@ section {
   font-style: italic;
   padding: 0;
   margin: 0 0 40px 0;
+  margin-bottom: 5px;
 }
 
 #footer .social-links {
@@ -1257,8 +1258,17 @@ section {
 
 #footer .copyright {
   margin: 0 0 5px 0;
+  margin-bottom: 0px;
+  margin-top: 20px;
 }
 
 #footer .credits {
   font-size: 13px;
 }
+
+#footer .visitor-counter p {
+      text-align: center;
+      margin-bottom: 0px;
+      margin-top: 15px; /* Adjust margin to reduce gap */
+    }
+    
