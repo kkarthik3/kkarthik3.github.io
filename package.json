@@ -1,12 +1,12 @@
 {
   "name": "3d-portfolio-website",
   "version": "0.1.1",
-  "homepage": "https://rishavchanda.github.io",
+  "homepage": "https://kkarthik3.github.io",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.1.0",
     "@emotion/react": "^11.11.3",
-    "@emotion/styled": "^11.11.0",
+    "@emotion/styled": "^11.11.0",  
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@mui/icons-material": "^5.15.10",
