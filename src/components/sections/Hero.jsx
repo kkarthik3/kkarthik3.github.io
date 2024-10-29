@@ -14,7 +14,8 @@ import {
 // import StarCanvas from "../canvas/Stars";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub, faKaggle } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub, faKaggle} from '@fortawesome/free-brands-svg-icons';
+import { IoIosMail } from "react-icons/io";
 
 const HeroContainer = styled.div`
   display: flex;
@@ -243,6 +244,10 @@ const SocialLinks = styled.div`
     &.kaggle:hover {
       color: #20beff; /* Kaggle color on hover */
     }
+
+    &.Gmail:hover {
+      color: #fc3003; /* Kaggle color on hover */
+    }
   }
 `;
 
@@ -288,6 +293,9 @@ const Hero = () => {
                   </a>
                   <a href={Bio.kaggle} className="kaggle" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faKaggle} size="lg"/>
+                  </a>
+                  <a href={`mailto:${Bio.mail}`} className="Gmail" target="_blank" rel="noopener noreferrer">
+                    <IoIosMail size={32}/>
                   </a>
                 </SocialLinks>
               </motion.div>

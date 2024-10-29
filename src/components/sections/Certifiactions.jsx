@@ -14,6 +14,7 @@ import cert8 from "../../images/Certificates/8.png";
 
 
 const Container = styled.div`
+margin-top: 100px;
 display: flex;
 flex-direction: column;
 justify-content-center;

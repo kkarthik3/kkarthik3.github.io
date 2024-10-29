@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { Bio } from "../../data/constants";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import InstagramIcon from "@mui/icons-material/Instagram";
+// import { Bio } from "../../data/constants";
+// import FacebookIcon from "@mui/icons-material/Facebook";
+// import TwitterIcon from "@mui/icons-material/Twitter";
+// import LinkedInIcon from "@mui/icons-material/LinkedIn";
+// import InstagramIcon from "@mui/icons-material/Instagram";
 
 const FooterContainer = styled.div`
   width: 100%;
@@ -28,7 +28,7 @@ const FooterWrapper = styled.div`
 
 const Logo = styled.div`
   font-weight: 600;
-  font-size: 20px;
+  font-size: 40px;
   color: ${({ theme }) => theme.primary};
 `;
 
@@ -62,20 +62,34 @@ const NavLink = styled.a`
   }
 `;
 
-const SocialMediaIcons = styled.div`
-  display: flex;
-  margin-top: 1rem;
+const FooterText = styled.p`
+  font-size: 15px;
+  font-style: italic;
+  padding: 0;
+  margin: 0 0 5px 0;
+  margin-top: 1.5rem;
 `;
-const SocialMediaIcon = styled.a`
-  display: inline-block;
-  margin: 0 1rem;
-  font-size: 1.5rem;
-  color: ${({ theme }) => theme.text_primary};
-  transition: color 0.2s ease-in-out;
-  &:hover {
-    color: ${({ theme }) => theme.primary};
-  }
+
+const Role = styled.p`
+  font-size: 20px;
+  font-style: italic;
+
 `;
+
+// const SocialMediaIcons = styled.div`
+//   display: flex;
+//   margin-top: 1rem;
+// `;
+// const SocialMediaIcon = styled.a`
+//   display: inline-block;
+//   margin: 0 1rem;
+//   font-size: 1.5rem;
+//   color: ${({ theme }) => theme.text_primary};
+//   transition: color 0.2s ease-in-out;
+//   &:hover {
+//     color: ${({ theme }) => theme.primary};
+//   }
+// `;
 
 const Copyright = styled.p`
   margin-top: 1.5rem;
@@ -88,15 +102,19 @@ const Footer = () => {
   return (
     <FooterContainer>
       <FooterWrapper>
-        <Logo>Rishav Chanda</Logo>
+        <Logo>Karthikeyan K</Logo>
+        <Role>ML/AI Engineer</Role> 
         <Nav>
           <NavLink href="#About">About</NavLink>
           <NavLink href="#Skills">Skills</NavLink>
           <NavLink href="#Experience">Experience</NavLink>
           <NavLink href="#Projects">Projects</NavLink>
           <NavLink href="#Education">Education</NavLink>
+          <NavLink href="#Certifications">Certifications</NavLink>
         </Nav>
-        <SocialMediaIcons>
+          <FooterText>Number of Visitors</FooterText> 
+          <img src="https://profile-counter.glitch.me/dryftbghnjfdcgfvhgbjhnjmk/count.svg" alt="Visitor counter" />
+        {/* <SocialMediaIcons>
           <SocialMediaIcon href={Bio.facebook} target="display">
             <FacebookIcon />
           </SocialMediaIcon>
@@ -109,8 +127,8 @@ const Footer = () => {
           <SocialMediaIcon href={Bio.insta} target="display">
             <InstagramIcon />
           </SocialMediaIcon>
-        </SocialMediaIcons>
-        <Copyright>&copy; 2024 Rishav Chanda. All rights reserved.</Copyright>
+        </SocialMediaIcons> */}
+        <Copyright>&copy; 2024 Karthikeyan K. All rights reserved.</Copyright>
       </FooterWrapper>
     </FooterContainer>
   );
