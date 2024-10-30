@@ -113,7 +113,7 @@ const Footer = () => {
           <NavLink href="#Certifications">Certifications</NavLink>
         </Nav>
           <FooterText>Number of Visitors</FooterText> 
-          <img src="https://profile-counter.glitch.me/dryftbghnjfdcgfvhgbjhnjmk/count.svg" alt="Visitor counter" />
+          <img src="https://profile-counter.glitch.me/karthickportfoliocounter0/count.svg" alt="Visitor counter" />
         {/* <SocialMediaIcons>
           <SocialMediaIcon href={Bio.facebook} target="display">
             <FacebookIcon />
