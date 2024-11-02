@@ -11,7 +11,7 @@ import Experience from "./components/sections/Experience";
 import Projects from "./components/sections/Projects";
 import Contact from "./components/sections/Contact";
 import Footer from "./components/sections/Footer";
-// import ProjectDetails from "./components/Dialog/ProjectDetails";
+import ProjectDetails from "./components/Dialog/ProjectDetails";
 import Certifications from "./components/sections/Certifiactions";
 import { useState } from "react";
 
@@ -62,12 +62,12 @@ function App() {
               </Wrapper>
               <Footer />
 
-              {/* {openModal.state && (
+              {openModal.state && (
                 <ProjectDetails
                   openModal={openModal}
                   setOpenModal={setOpenModal}
                 />
-              )} */}
+              )}
             </div>
           </AnimatePresence>
         </Body>
