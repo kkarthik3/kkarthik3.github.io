@@ -365,7 +365,7 @@ export const projects = [
     tags: ["Python", "Langchain", "AWS", "Bedrock", "RAG", "Embeddings"],  
     category: "Gen-AI",
     github: "https://github.com/kkarthik3/LLM-RAG",
-    webapp: "",
+    webapp: "https://llm-rag-bu.streamlit.app/",
     // member: [
     //   {
     //     name: "Rishav Chanda",
