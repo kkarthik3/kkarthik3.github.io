@@ -9,7 +9,7 @@ Welcome to my portfolio! This project highlights my journey, skills, and project
 |--------------|-------|
 | Hero         | <img width="450px;" src="public/readme_data/Hero.png"/> |
 | Skills       | <img width="450px;" src="public/readme_data/Skills.png"/> |
-| Experience   | <img width="450px;" src="public/readme_data/Experience.png"/> |
+| Experience   | <img width="450px;" src="public/readme_data/Experiene.png"/> |
 | Projects     | <img width="450px;" src="public/readme_data/Projects.png"/> |
 | Education    | <img width="450px;" src="public/readme_data/Education.png"/> |
 | Certifications | <img width="450px;" src="public/readme_data/Certifications.png"/> |
