@@ -235,6 +235,7 @@ const SocialLinks = styled.div`
 
     &:hover {
       color: #0077b5; /* LinkedIn color on hover */
+      scale:1.2;
     }
 
     &.github:hover {

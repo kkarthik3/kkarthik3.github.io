@@ -11,7 +11,7 @@ export const darkTheme = {
   black: "#000000",
 };
 
-export const lightTheme = {
+export const light = {
   bg: "#FFFFFF",
   bgLight: "#f0f0f0",
   primary: "#be1adb",
@@ -20,3 +20,17 @@ export const lightTheme = {
   card: "#FFFFFF",
   button: "#5c5b5b",
 };
+
+export const lightTheme = {
+  bg: "#FFFFFF",
+  bgLight: "#F2F3F4",
+  primary: "#854CE6", // Keeping primary the same to maintain brand consistency, or adjust as desired
+  text_primary: "#090917",
+  text_secondary: "#4E4F50",
+  card: "#E9E9EF",
+  card_light: "#E2E3EA",
+  button: "#854CE6", // Also keeping the same as in dark theme
+  white: "#FFFFFF",
+  black: "#000000",
+};
+

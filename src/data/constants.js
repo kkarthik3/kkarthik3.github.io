@@ -355,6 +355,19 @@ export const education = [
 
 export const projects = [
   {
+    id: 6,
+    title: "Resume-Assistant(API)",
+    date: "Jul 2024",
+    description:
+      "This project is a chatbot platform that leverages vector-based search and natural language generation to answer queries about Karthikeyan's portfolio and professional background. It features 1) Extracts and processes text from a linked PDF document. 2) Vector Embeddings: Converts document text into embeddings for similarity search. 3) FastAPI Endpoints: Provides endpoints for querying and refreshing data. 4) Chatbot Persona: Custom responses styled as Karthikeyan, an ML engineer.",
+    image:
+      "Projects/resume.png",
+    tags: ["python","langchain","fastapi","Transformers","embeddings","Genrative-AI","Fast-API","MongoDB","vector_search","Prompt engineeering"],
+    category:"Gen-AI",
+    github: "https://github.com/kkarthik3/Resume-assistant",
+    webapp: "",
+  },
+  {
     id: 0,
     title: "LLM RAG Retrieval",
     date: "Jan 2024 - Apr 2024",
@@ -382,6 +395,19 @@ export const projects = [
     // ],
   },
   {
+    id: 6,
+    title: "Stock-Predictor",
+    date: "Feb 2024",
+    description:
+      "Developed interactive web application built with Streamlit that predicts stock prices using LSTM (Long Short-Term Memory) neural networks. Upload your historical stock data and get future price predictions with interactive visualizations.",
+    image:
+      "Projects/stock.png",
+    tags: ["Python", "Tensorflow", "Keras", "LSTM", "Streamlit", "Scikit-learn", "Numpy","Streamlit"],
+    category:"Machine learning",
+    github: "https://github.com/kkarthik3/Resume-assistant",
+    webapp: "",
+  },
+  {
     id: 2,
     title: "HUMAN VS AI TEXT CLASSIFICATION",
     date: "Jan 2024",
@@ -402,7 +428,7 @@ export const projects = [
       "Implemented TensorFlow's CNN framework to enhance low resolution medical MRI images using the FSRCNN model increased image clarity by 35% enabling extraction of crucial details for accurate diagnosis and treatment planning",
     image:
       "Projects/MRIEnhancer.png",
-    tags: ["Python", "Tensorflow", "Keras", "CNN", "Streamlit", "Scikit-learn", "Numpy"],
+    tags: ["Python", "Tensorflow", "Keras", "CNN", "Streamlit", "Scikit-learn", "Numpy","Image"],
     category:"Machine learning",
     github: "https://github.com/kkarthik3/FSRCNN-for-MRI-images",
     webapp: "",
@@ -422,6 +448,19 @@ export const projects = [
   },
   {
     id: 4,
+    title: "CNN Visulaizer",
+    date: "Dec 2022",
+    description:
+      "Implemented Streamlit application provides an interactive visualization of how a Convolutional Neural Network (CNN) processes and classifies handwritten digits from the MNIST dataset. The app allows users to explore various aspects of the CNN, including filters, feature maps, and layer outputs.",
+    image:
+      "Projects/CNN_visualizer.png",
+    tags: ["Python", "Tensorflow", "Keras", "Scikit-learn", "Transformers", "streamlit"],
+    category:"Machine learning",
+    github: "https://github.com/kkarthik3/CNN-Visualizer",
+    webapp: "https://cnn-visualizer-mnist.streamlit.app/",
+  },
+  {
+    id: 5,
     title: "SENTIMENT ANALYSIS ON SCRAPPED AMAZON PRODUCT REVIEWS",
     date: "Dec 2022",
     description:

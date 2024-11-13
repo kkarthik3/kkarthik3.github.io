@@ -13,6 +13,7 @@ import Projects from "./components/sections/Projects";
 import Footer from "./components/sections/Footer";
 import ProjectDetails from "./components/Dialog/ProjectDetails";
 import Certifications from "./components/sections/Certifiactions";
+import Chatbot from "./components/sections/Chatbot";
 import { useState } from "react";
 
 
@@ -68,9 +69,11 @@ function App() {
                   setOpenModal={setOpenModal}
                 />
               )}
+              
             </div>
           </AnimatePresence>
         </Body>
+        <Chatbot />
       </BrowserRouter>
     </ThemeProvider>
   );

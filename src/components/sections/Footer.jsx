@@ -103,6 +103,8 @@ const SocialMediaIcon = styled.a`
   transition: color 0.2s ease-in-out;
   &:hover {
     color: ${({ theme }) => theme.primary};
+    scale: 1.2;
+    transition: color 0.2s ease-in-out;
   }
 `;
 
@@ -153,7 +155,7 @@ const Footer = () => {
           <NavLink href="#Certifications">Certifications</NavLink>
         </Nav> */}
           <FooterText>Number of Visitors</FooterText> 
-          <img src="https://profile-counter.glitch.me/karthickportfoliocounter0/count.svg" alt="Visitor counter" />
+          {/* <img src="https://profile-counter.glitch.me/karthickportfoliocounter0/count.svg" alt="Visitor counter" /> */}
         <Copyright>&copy; 2024 Karthikeyan K. All rights reserved.</Copyright>
       </FooterWrapper>
     </FooterContainer>
