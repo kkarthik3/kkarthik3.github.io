@@ -35,4 +35,4 @@ jobs:
       - name: Push Docker image
         run: |
           SHORT_SHA=${GITHUB_SHA::7}
-          docker push react_portfolio:${SHORT_SHA}
+          docker push ${{ secrets.DOCKER_USERNAME }}/react_portfolio:${SHORT_SHA}
