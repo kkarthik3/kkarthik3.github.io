@@ -139,7 +139,7 @@ const Footer = () => {
           <SocialMediaIcon href={`https://wa.me/${Bio.mobile}`} target="display">
             <FaWhatsapp />
           </SocialMediaIcon>
-          <SocialMediaIcon href={Bio.mail} target="display">
+          <SocialMediaIcon href={`mailto:${Bio.mail}`} target="display">
             <SiGmail />
           </SocialMediaIcon>
           <SocialMediaIcon href={Bio.github} target="display">

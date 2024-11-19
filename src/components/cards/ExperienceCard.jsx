@@ -94,6 +94,28 @@ const ItemWrapper = styled.div`
   gap: 8px;
 `;
 
+// const ViewDocument = styled.a`
+//   display: inline-block;
+//   margin-top: 10px;
+//   font-size: 14px;
+//   font-weight: 500;
+//   color: ${({ theme }) => theme.link_color || "#007bff"};
+//   text-decoration: none;
+//   border: 1px solid ${({ theme }) => theme.link_color || "#007bff"};
+//   padding: 6px 12px;
+//   border-radius: 4px;
+//   transition: background-color 0.3s ease, color 0.3s ease;
+
+//   &:hover {
+//     background-color: ${({ theme }) => theme.link_color || "#007bff"};
+//     color: #fff;
+//   }
+
+//   @media only screen and (max-width: 768px) {
+//     font-size: 12px;
+//   }
+// `;
+
 const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
@@ -113,7 +135,6 @@ const ExperienceCard = ({ experience }) => {
         background: "#1d1836",
         color: "#fff",
         boxShadow: "rgba(23, 92, 230, 0.15) 0px 4px 24px",
-        // backdropFilter: "blur(3px) saturate(106%)",
         backgroundColor: "rgba(17, 25, 40, 0.83)",
         border: "1px solid rgba(255, 255, 255, 0.125)",
         borderRadius: "6px",
@@ -140,12 +161,21 @@ const ExperienceCard = ({ experience }) => {
               <b>Skills:</b>
               <ItemWrapper>
                 {experience?.skills?.map((skill, index) => (
-                  <Skill>• {skill}</Skill>
+                  <Skill key={index}>• {skill}</Skill>
                 ))}
               </ItemWrapper>
             </Skills>
           </>
         )}
+        {/* {experience?.doc && (
+          <ViewDocument
+            href={experience?.doc}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Document
+          </ViewDocument>
+        )} */}
       </Description>
     </VerticalTimelineElement>
   );

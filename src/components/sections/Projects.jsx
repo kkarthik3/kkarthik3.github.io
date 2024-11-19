@@ -104,8 +104,7 @@ const Projects = ({ openModal, setOpenModal }) => {
             marginBottom: "40px",
           }}
         >
-          I have worked on a wide range of projects. From web apps to android
-          apps. Here are some of my projects.
+          I have worked on a wide range of projects. From Machine Learning to Gen-AI Project. Here are some of my projects. For more Please Refer Github
         </Desc>
         <ToggleButtonGroup>
           <ToggleButton

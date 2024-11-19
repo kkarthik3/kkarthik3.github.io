@@ -306,7 +306,24 @@ export const experiences = [
       "MongoDB",
       "Neo4j",
     ],
-    doc: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/Screenshot%20from%202024-01-25%2022-38-31.png?alt=media&token=2785903f-1a4e-41f5-afd2-6adcfe56d058",
+  },
+  {
+    id: 0,
+    img: "https://www.pikpng.com/pngl/m/146-1462355_logo-bharathiar-university-coimbatore-clipart.png",
+    role: "Research on MRI Image Enhancer (Under Review)",
+    company: "Bharathiar University, Coimbatore",
+    date: "Oct 2023 - Apr 2024",
+    desc: "Research On Image Upscaling using  FSRCNN architecture Using Tensorflow's CNN, by altering the structure of various layers and parameter Tuning like various Activations functions Like Relu,PRelu, An combination of PRelu and concluded The PRelu function Gives the Potential output for Image upscaling for MRI Images",
+    skills: [
+      "AWS",
+      "Docker",
+      "Python",
+      "Tensorflow",
+      "PyImage",
+      "Numpy",
+      "Keras",
+      "Computer Vision",
+    ],
   },
   {
     id: 1,
@@ -319,7 +336,6 @@ export const experiences = [
       "Excel",
       "Pandas",
     ],
-    doc: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/1696514649120.jpeg?alt=media&token=e7f6757b-edfa-4138-a692-d6709eeef3e2",
   },
 ];
 
