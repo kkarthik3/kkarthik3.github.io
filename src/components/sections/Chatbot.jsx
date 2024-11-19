@@ -139,7 +139,7 @@ const Chatbot = () => {
       setTimeout(() => {
         setMessages([
           ...newMessages,
-          { text: "Hello! How can I help you?", sender: "bot" }
+          { text: "Hang tight, the chatbot is brewing; updates will be shared soon.", sender: "bot" }
         ]);
       }, 500);
     }

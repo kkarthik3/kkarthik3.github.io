@@ -155,7 +155,7 @@ const Footer = () => {
           <NavLink href="#Certifications">Certifications</NavLink>
         </Nav> */}
           <FooterText>Number of Visitors</FooterText> 
-          {/* <img src="https://profile-counter.glitch.me/karthickportfoliocounter0/count.svg" alt="Visitor counter" /> */}
+          <img src="https://profile-counter.glitch.me/karthickportfoliocounter0/count.svg" alt="Visitor counter" />
         <Copyright>&copy; 2024 Karthikeyan K. All rights reserved.</Copyright>
       </FooterWrapper>
     </FooterContainer>

@@ -361,7 +361,7 @@ export const projects = [
     description:
       "This project is a chatbot platform that leverages vector-based search and natural language generation to answer queries about Karthikeyan's portfolio and professional background. It features 1) Extracts and processes text from a linked PDF document. 2) Vector Embeddings: Converts document text into embeddings for similarity search. 3) FastAPI Endpoints: Provides endpoints for querying and refreshing data. 4) Chatbot Persona: Custom responses styled as Karthikeyan, an ML engineer.",
     image:
-      "Projects/resume.png",
+      "Projects/Resume.png",
     tags: ["python","langchain","fastapi","Transformers","embeddings","Genrative-AI","Fast-API","MongoDB","vector_search","Prompt engineeering"],
     category:"Gen-AI",
     github: "https://github.com/kkarthik3/Resume-assistant",
@@ -401,7 +401,7 @@ export const projects = [
     description:
       "Developed interactive web application built with Streamlit that predicts stock prices using LSTM (Long Short-Term Memory) neural networks. Upload your historical stock data and get future price predictions with interactive visualizations.",
     image:
-      "Projects/stock.png",
+      "Projects/Stock.png",
     tags: ["Python", "Tensorflow", "Keras", "LSTM", "Streamlit", "Scikit-learn", "Numpy","Streamlit"],
     category:"Machine learning",
     github: "https://github.com/kkarthik3/Resume-assistant",
