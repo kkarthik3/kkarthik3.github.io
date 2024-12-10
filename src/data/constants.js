@@ -19,6 +19,7 @@ export const Bio = {
   insta: "",
   facebook: "",
   kaggle:"https://www.kaggle.com/kk3103",
+  leetcode:"https://leetcode.com/u/karthickinfo45/"
 };
 
 export const skills = [
@@ -290,11 +291,11 @@ export const skills = [
 
 export const experiences = [
   {
-    id: 0,
+    id: 3,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX9Tp499yldL5nSVxSTtyMkyRDZxXwbCIXQg&s",
-    role: "Machine Learning Engineer intern",
+    role: "Associate Machine Learning Engineer intern",
     company: "ISPG Technologies Pvt. Ltd.",
-    date: "May 2024 - Present",
+    date: "Dec 2024 - Present",
     desc: "As a Machine Learning Engineer, I specialize in leveraging Langgraph agents and RAG (Retrieval-Augmented Generation) based technologies to enhance data processing and analysis. Utilizing AWS services, I design and implement scalable solutions that integrate these advanced tools, enabling efficient information retrieval and generation. My work focuses on optimizing workflows and delivering insightful outcomes through innovative applications of generative AI.",
     skills: [
       "AWS",
@@ -313,7 +314,30 @@ export const experiences = [
     ],
   },
   {
-    id: 0,
+    id: 2,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX9Tp499yldL5nSVxSTtyMkyRDZxXwbCIXQg&s",
+    role: "Machine Learning Engineer intern",
+    company: "ISPG Technologies Pvt. Ltd.",
+    date: "May 2024 - Dec 2024",
+    desc: "As a Machine Learning Engineer, I specialize in leveraging Langgraph agents and RAG (Retrieval-Augmented Generation) based technologies to enhance data processing and analysis. Utilizing AWS services, I design and implement scalable solutions that integrate these advanced tools, enabling efficient information retrieval and generation. My work focuses on optimizing workflows and delivering insightful outcomes through innovative applications of generative AI.",
+    skills: [
+      "AWS",
+      "Fast-API",
+      "Flask",
+      "Bedrock",
+      "Docker",
+      "Python",
+      "Gen-AI",
+      "NLP",
+      "RAG",
+      "LangGraph",
+      "Groq",
+      "MongoDB",
+      "Neo4j",
+    ],
+  },
+  {
+    id: 1,
     img: "https://www.pikpng.com/pngl/m/146-1462355_logo-bharathiar-university-coimbatore-clipart.png",
     role: "Research on MRI Image Enhancer (Under Review)",
     company: "Bharathiar University, Coimbatore",
@@ -331,7 +355,7 @@ export const experiences = [
     ],
   },
   {
-    id: 1,
+    id: 0,
     img: "https://lh3.googleusercontent.com/a-/ALV-UjXSapMWT5BflrAnrcAGw9lkZ2wRD6qzTc55n7Y1wWvkPhl5u88=s72-p-k-rw-no",
     role: "Finance Admin",
     company: "MK labels Pvt. Ltd.",

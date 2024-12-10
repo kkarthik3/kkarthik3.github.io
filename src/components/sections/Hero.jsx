@@ -16,6 +16,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub, faKaggle} from '@fortawesome/free-brands-svg-icons';
 import { IoIosMail } from "react-icons/io";
+import { SiLeetcode } from "react-icons/si";
 
 const HeroContainer = styled.div`
   display: flex;
@@ -249,6 +250,11 @@ const SocialLinks = styled.div`
     &.Gmail:hover {
       color: #fc3003; /* Kaggle color on hover */
     }
+      
+    &.leetcode:hover {
+      color: #f89c14; /* Kaggle color on hover */
+    }
+
   }
 `;
 
@@ -294,6 +300,9 @@ const Hero = () => {
                   </a>
                   <a href={Bio.kaggle} className="kaggle" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faKaggle} size="lg"/>
+                  </a>
+                  <a href={`mailto:${Bio.leetcode}`} className="leetcode" target="_blank" rel="noopener noreferrer">
+                    <SiLeetcode size={30}/>
                   </a>
                   <a href={`mailto:${Bio.mail}`} className="Gmail" target="_blank" rel="noopener noreferrer">
                     <IoIosMail size={32}/>

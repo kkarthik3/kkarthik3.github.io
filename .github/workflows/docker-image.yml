@@ -29,10 +29,8 @@ jobs:
       #   run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
       - name: Build Docker image
         run: |
-          SHORT_SHA=${GITHUB_SHA::7}
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/react_portfolio:${SHORT_SHA} .
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/react_portfolio:latest .
           
       - name: Push Docker image
         run: |
-          SHORT_SHA=${GITHUB_SHA::7}
-          docker push ${{ secrets.DOCKER_USERNAME }}/react_portfolio:${SHORT_SHA}
+          docker push ${{ secrets.DOCKER_USERNAME }}/react_portfolio:latest
