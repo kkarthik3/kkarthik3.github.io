@@ -301,7 +301,7 @@ const Hero = () => {
                   <a href={Bio.kaggle} className="kaggle" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faKaggle} size="lg"/>
                   </a>
-                  <a href={`mailto:${Bio.leetcode}`} className="leetcode" target="_blank" rel="noopener noreferrer">
+                  <a href={Bio.leetcode} className="leetcode" target="_blank" rel="noopener noreferrer">
                     <SiLeetcode size={30}/>
                   </a>
                   <a href={`mailto:${Bio.mail}`} className="Gmail" target="_blank" rel="noopener noreferrer">
