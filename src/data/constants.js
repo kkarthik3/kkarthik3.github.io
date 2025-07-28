@@ -34,7 +34,7 @@ export const skills = [
       {
         name: "Tensorflow",
         image:
-          "https://static-00.iconduck.com/assets.00/tensorflow-icon-1911x2048-1m2s54vn.png",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tensorflow_logo.svg/449px-Tensorflow_logo.svg.png",
       },
       {
         name: "Keras",
@@ -84,7 +84,7 @@ export const skills = [
       {
         name: "Neo4j",
         image:
-          "https://yt3.googleusercontent.com/BEHbbtI42GHOisSFC2P0SDkPlBO9eofY_vle616iX0ze76HT3_P40AzE9TjGQH2nxsGaWyey9g=s900-c-k-c0x00ffffff-no-rj",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpW1OhGpQuODZZSpS5C9sjdS3-cB1Vs9xmsPT96IddbontDg22Z8tuF8oKFaquDhkbIdE",
       },
     ],
   },
@@ -292,10 +292,34 @@ export const skills = [
 export const experiences = [
   {
     id: 3,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpTCyFnRfkc000gbl2msTIdZGdgb4bcydeJA&s",
+    role: "Machine Learning Engineer",
+    company: "Kadit Innovations",
+    date: "Mar 2025 - Present",
+    desc: "As a Machine Learning Engineer, I focus on developing intelligent systems that combine graph-based semantic search and agentic workflows to handle diverse input queries. I’ve worked extensively on protein semantic search using graph traversal techniques, enabling advanced biological data discovery. My experience includes building AI agent workflows for dynamic query routing, integrating technologies like LangGraph, OpenAI, and Groq to optimize performance across various tasks. Additionally, I’ve implemented YOLO-based object detection and facial recognition pipelines for human tracking, including user identity management and record maintenance. My work emphasizes scalable, cloud-native solutions—primarily on AWS—for real-time information retrieval and processing.",
+    skills: [
+      "AWS",
+      "Fast-API",
+      "Flask",
+      "Bedrock",
+      "Docker",
+      "Python",
+      "Gen-AI",
+      "NLP",
+      "RAG",
+      "LangGraph",
+      "Groq",
+      "MongoDB",
+      "Neo4j",
+      "Yolov8l"
+    ],
+  },
+  {
+    id: 3,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX9Tp499yldL5nSVxSTtyMkyRDZxXwbCIXQg&s",
-    role: "Associate Machine Learning Engineer intern",
+    role: "Associate Machine Learning Engineer",
     company: "ISPG Technologies Pvt. Ltd.",
-    date: "Dec 2024 - Present",
+    date: "Dec 2024 - Mar 2025",
     desc: "As a Machine Learning Engineer, I specialize in leveraging Langgraph agents and RAG (Retrieval-Augmented Generation) based technologies to enhance data processing and analysis. Utilizing AWS services, I design and implement scalable solutions that integrate these advanced tools, enabling efficient information retrieval and generation. My work focuses on optimizing workflows and delivering insightful outcomes through innovative applications of generative AI.",
     skills: [
       "AWS",

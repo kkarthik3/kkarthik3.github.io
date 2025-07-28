@@ -136,9 +136,9 @@ const Footer = () => {
           </SocialMediaIcon>
           
           {/* <iconname style={{alignItems: 'center'}} >Linkedin</iconname> */}
-          <SocialMediaIcon href={`https://wa.me/${Bio.mobile}`} target="display">
+          {/* <SocialMediaIcon href={`https://wa.me/${Bio.mobile}`} target="display">
             <FaWhatsapp />
-          </SocialMediaIcon>
+          </SocialMediaIcon> */}
           <SocialMediaIcon href={`mailto:${Bio.mail}`} target="display">
             <SiGmail />
           </SocialMediaIcon>
@@ -155,7 +155,7 @@ const Footer = () => {
           <NavLink href="#Certifications">Certifications</NavLink>
         </Nav> */}
           <FooterText>Number of Visitors</FooterText> 
-          <img src="https://profile-counter.glitch.me/karthickportfoliocounter0/count.svg" alt="Visitor counter" />
+          <img src="https://profile-counter.deno.dev/kkarthik3/count.svg" alt="Visitor counter" />
         <Copyright>&copy; 2024 Karthikeyan K. All rights reserved.</Copyright>
       </FooterWrapper>
     </FooterContainer>
