@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Bio } from "../../data/constants";
+import { Bio, yoe } from "../../data/constants";
 import Typewriter from "typewriter-effect";
 import HeroImg from "../../images/Hero.png";
 import HeroBgAnimation from "../HeroBgAnimation";
@@ -11,7 +11,7 @@ import {
   headContentAnimation,
   headTextAnimation,
 } from "../../utils/motion";
-// import StarCanvas from "../canvas/Stars";
+import StarCanvas from "../canvas/Stars";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub, faKaggle} from '@fortawesome/free-brands-svg-icons';
@@ -258,12 +258,25 @@ const SocialLinks = styled.div`
   }
 `;
 
+const YOE = styled.div`
+  font-weight: 500;
+  font-size: 20px;
+  color: ${({ theme }) => theme.text_primary};
+  margin-top: 16px;
+
+  @media (max-width: 960px) {
+    text-align: center;
+    font-size: 18px;
+  }
+`;
+
+
 const Hero = () => {
   return (
     <div id="About">
       <HeroContainer>
         <HeroBg>
-          {/* <StarCanvas /> */}
+          { <StarCanvas /> }
           <HeroBgAnimation />
         </HeroBg>
 
@@ -286,6 +299,7 @@ const Hero = () => {
                     />
                   </Span>
                 </TextLoop>
+                <YOE>{yoe.approxInYears}+ Years of Experience</YOE>
               </motion.div>
 
               <motion.div {...headContentAnimation}>

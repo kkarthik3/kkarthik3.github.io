@@ -1,3 +1,4 @@
+import { calculateYOE } from "./exp";
 
 export const Bio = {
   name: "Karthikeyan K",
@@ -273,7 +274,7 @@ export const skills = [
       {
         name: "Postman",
         image:
-          "https://static-00.iconduck.com/assets.00/postman-icon-497x512-beb7sy75.png",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-TB9d5YXwtKhv4NWbpeTBVveYvcxu9gMJng&s",
       },
       {
         name: "Arduino IDE",
@@ -289,14 +290,15 @@ export const skills = [
   },
 ];
 
+
 export const experiences = [
   {
-    id: 3,
+    id: 2,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpTCyFnRfkc000gbl2msTIdZGdgb4bcydeJA&s",
     role: "Machine Learning Engineer",
     company: "Kadit Innovations",
     date: "Mar 2025 - Present",
-    desc: "As a Machine Learning Engineer, I focus on developing intelligent systems that combine graph-based semantic search and agentic workflows to handle diverse input queries. I’ve worked extensively on protein semantic search using graph traversal techniques, enabling advanced biological data discovery. My experience includes building AI agent workflows for dynamic query routing, integrating technologies like LangGraph, OpenAI, and Groq to optimize performance across various tasks. Additionally, I’ve implemented YOLO-based object detection and facial recognition pipelines for human tracking, including user identity management and record maintenance. My work emphasizes scalable, cloud-native solutions—primarily on AWS—for real-time information retrieval and processing.",
+    desc: "As a ML Enginner I work on AI-powered solutions in bioinformatics and computer vision. I designed a protein vector search engine using Neo4j for similarity-based retrieval and annotation of PTMs, and developed a real-time CCTV attendance monitoring system leveraging YOLO, InsightFace, and WebSocket-based event capture. I specialize in deploying large-scale applications on AWS (EC2, S3, EKS, Lambda) to ensure performance, scalability, and reliability in processing complex datasets.",
     skills: [
       "AWS",
       "Fast-API",
@@ -315,82 +317,44 @@ export const experiences = [
     ],
   },
   {
-    id: 3,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX9Tp499yldL5nSVxSTtyMkyRDZxXwbCIXQg&s",
-    role: "Associate Machine Learning Engineer",
-    company: "ISPG Technologies Pvt. Ltd.",
-    date: "Dec 2024 - Mar 2025",
-    desc: "As a Machine Learning Engineer, I specialize in leveraging Langgraph agents and RAG (Retrieval-Augmented Generation) based technologies to enhance data processing and analysis. Utilizing AWS services, I design and implement scalable solutions that integrate these advanced tools, enabling efficient information retrieval and generation. My work focuses on optimizing workflows and delivering insightful outcomes through innovative applications of generative AI.",
-    skills: [
-      "AWS",
-      "Fast-API",
-      "Flask",
-      "Bedrock",
-      "Docker",
-      "Python",
-      "Gen-AI",
-      "NLP",
-      "RAG",
-      "LangGraph",
-      "Groq",
-      "MongoDB",
-      "Neo4j",
-    ],
-  },
-  {
-    id: 2,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX9Tp499yldL5nSVxSTtyMkyRDZxXwbCIXQg&s",
-    role: "Machine Learning Engineer intern",
-    company: "ISPG Technologies Pvt. Ltd.",
-    date: "May 2024 - Dec 2024",
-    desc: "As a Machine Learning Engineer, I specialize in leveraging Langgraph agents and RAG (Retrieval-Augmented Generation) based technologies to enhance data processing and analysis. Utilizing AWS services, I design and implement scalable solutions that integrate these advanced tools, enabling efficient information retrieval and generation. My work focuses on optimizing workflows and delivering insightful outcomes through innovative applications of generative AI.",
-    skills: [
-      "AWS",
-      "Fast-API",
-      "Flask",
-      "Bedrock",
-      "Docker",
-      "Python",
-      "Gen-AI",
-      "NLP",
-      "RAG",
-      "LangGraph",
-      "Groq",
-      "MongoDB",
-      "Neo4j",
-    ],
-  },
-  {
     id: 1,
-    img: "https://www.pikpng.com/pngl/m/146-1462355_logo-bharathiar-university-coimbatore-clipart.png",
-    role: "Research on MRI Image Enhancer (Under Review)",
-    company: "Bharathiar University, Coimbatore",
-    date: "Oct 2023 - Apr 2024",
-    desc: "Research On Image Upscaling using  FSRCNN architecture Using Tensorflow's CNN, by altering the structure of various layers and parameter Tuning like various Activations functions Like Relu,PRelu, An combination of PRelu and concluded The PRelu function Gives the Potential output for Image upscaling for MRI Images",
-    skills: [
+    img: "https://static.ambitionbox.com/assets/v2/images/rs:fit:200:200:false:false/bG9jYWw6Ly8vbG9nb3Mvb3JpZ2luYWxzL2lzcGctdGVjaG5vbG9naWVzLmpwZw.webp",
+    role: "Intern → Associate Machine Learning Engineer",
+    company: "ISPG Technologies Pvt. Ltd.",
+    date: "May 2024 - Mar 2025",
+    desc: "As a Machine Learning Engineer, At ISPG Technologies, I specialized in retrieval-augmented generation (RAG) and AI chatbot workflows. I developed a RAG-based product manual chatbot using LangGraph, Mongo VectorSearch, and web crawlers, and integrated RAG into CRM systems for NLP-to-Cypher query translation. I also built AI-powered e-commerce query systems with intelligent search and recommendation engines, improving customer experience and business performance. Additionally, I worked on voice-based bots and Chatbase agentic bots, focusing on structured, scalable, and agent-driven AI solutions.",
+      skills: [
       "AWS",
+      "Fast-API",
+      "Flask",
+      "Bedrock",
       "Docker",
       "Python",
-      "Tensorflow",
-      "PyImage",
-      "Numpy",
-      "Keras",
-      "Computer Vision",
+      "Gen-AI",
+      "NLP",
+      "RAG",
+      "LangGraph",
+      "Groq",
+      "MongoDB",
+      "Neo4j",
     ],
   },
   {
     id: 0,
     img: "https://lh3.googleusercontent.com/a-/ALV-UjXSapMWT5BflrAnrcAGw9lkZ2wRD6qzTc55n7Y1wWvkPhl5u88=s72-p-k-rw-no",
-    role: "Finance Admin",
+    role: "Data & Operation Associate",
     company: "MK labels Pvt. Ltd.",
-    date: "March 2020 - May 2022",
-    desc: "Oversaw financial transactions, ensuring accurate records and compliance while creating detailed purchase and sales reports for audits. Conducted trend analysis in Excel, leading to a 15% reduction in unnecessary expenditures. Collaborated with company owners on expense reviews to address variances and strategize corrective actions for effective financial management.",
+    date: "May 2021 - Jul 2022",
+    desc: "As a Data Assocaite, I focused on financial data management and operational efficiency. I collected and organized data of financial transactions, prepared structured reports for Chartered Accountant review, and standardized client requirements for production workflows. I managed inventory and coordinated between clients and production teams to ensure timely stock delivery. Additionally, I designed and implemented an automated system to track over 500,000 stock units, significantly improving accuracy, reducing manual effort, and streamlining warehouse-to-client operations.",
     skills: [
       "Excel",
       "Pandas",
+      "Database",
     ],
   },
 ];
+
+export const yoe = calculateYOE(experiences);
 
 export const education = [
   {

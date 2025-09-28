@@ -1,14 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import neo4j from "../../images/Certificates/Neo4j.png"
 import aiCert from "../../images/Certificates/AI.jpg";
 import cloudCert from "../../images/Certificates/Cloud Practitioner.jpg";
 import dbmsCert from "../../images/Certificates/Data Base Management System.jpeg";
-import cert1 from "../../images/Certificates/1.png";
 import cert2 from "../../images/Certificates/2.png";
-import cert3 from "../../images/Certificates/3.png";
-import cert4 from "../../images/Certificates/4.png";
 import cert5 from "../../images/Certificates/5.png";
-import cert6 from "../../images/Certificates/6.png";
 import cert7 from "../../images/Certificates/7.png";
 import cert8 from "../../images/Certificates/8.png";
 
@@ -94,15 +91,12 @@ const Img = styled.img`
 
 const Certifications = () => {
   const certificates = [
+    { src: neo4j, alt: "neo4j" },
     { src: aiCert, alt: "AI Certificate" },
     { src: cloudCert, alt: "Cloud Practitioner Certificate" },
     { src: dbmsCert, alt: "Database Management System Certificate" },
-    { src: cert1, alt: "Certificate 1" },
     { src: cert2, alt: "Certificate 2" },
-    { src: cert3, alt: "Certificate 3" },
-    { src: cert4, alt: "Certificate 4" },
     { src: cert5, alt: "Certificate 5" },
-    { src: cert6, alt: "Certificate 6" },
     { src: cert7, alt: "Certificate 7" },
     { src: cert8, alt: "Certificate 8" },
     
