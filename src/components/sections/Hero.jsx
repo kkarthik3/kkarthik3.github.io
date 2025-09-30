@@ -299,7 +299,7 @@ const Hero = () => {
                     />
                   </Span>
                 </TextLoop>
-                <YOE>{yoe.approxInYears}+ Years of Experience</YOE>
+                <YOE>{yoe.approxInYears}+ Years of Experience ({yoe.years} Years {yoe.months} months)</YOE>
               </motion.div>
 
               <motion.div {...headContentAnimation}>
