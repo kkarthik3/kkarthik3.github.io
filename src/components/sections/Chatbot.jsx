@@ -6,7 +6,7 @@ const ChatbotContainer = styled.div`
   position: fixed;
   bottom: 30px;
   right: 20px;
-  width: ${(props) => (props.isOpen ? "300px" : "55px")};
+  width: ${(props) => (props.isOpen ? "500px" : "55px")};
   height: ${(props) => (props.isOpen ? "450px" : "55px")};
   background-color: ${({ theme }) => theme.card};
   color: ${({ theme }) => theme.text_primary};
@@ -56,9 +56,9 @@ const MessageBubble = styled.div`
   max-width: 80%;
   padding: 8px 15px;
   border-radius: 15px;
-  background-color: ${({ theme, sender }) => 
+  background-color: ${({ theme, sender }) =>
     sender === "user" ? theme.primary : theme.card_light};
-  color: ${({ theme, sender }) => 
+  color: ${({ theme, sender }) =>
     sender === "user" ? theme.white : theme.text_primary};
   word-wrap: break-word;
   font-size: 12px;
@@ -120,28 +120,79 @@ const Chatbot = () => {
     { text: "Hi, I'm Karthikeyan K, How may i help you", sender: "bot" }
   ]);
   const [input, setInput] = useState("");
-  
+  const [isLoading, setIsLoading] = useState(false);
+  const [sessionId] = useState(() => {
+    if (typeof crypto !== 'undefined' && crypto.randomUUID) {
+      return crypto.randomUUID();
+    }
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+      const r = Math.random() * 16 | 0;
+      const v = c === 'x' ? r : (r & 0x3 | 0x8);
+      return v.toString(16);
+    });
+  });
+
   const chatBodyRef = useRef(null); // Reference for auto-scrolling
 
   const toggleChatbot = () => {
     setIsOpen(!isOpen);
   };
 
-  const sendMessage = () => {
-    if (input.trim()) {
-      const newMessages = [
-        ...messages,
-        { text: input, sender: "user" }
-      ];
-      setMessages(newMessages);
+  const sendMessage = async () => {
+    if (input.trim() && !isLoading) {
+      const userMessage = input.trim();
       setInput("");
+      setIsLoading(true);
 
-      setTimeout(() => {
-        setMessages([
-          ...newMessages,
-          { text: "Hang tight, the chatbot is brewing; updates will be shared soon.", sender: "bot" }
-        ]);
-      }, 500);
+      setMessages((prev) => [
+        ...prev,
+        { text: userMessage, sender: "user" },
+        { text: "Typing...", sender: "bot", isLoadingMessage: true }
+      ]);
+
+      try {
+        const response = await fetch("https://resume-bot-655927503155.europe-west1.run.app/chat", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            text: userMessage,
+            session_id: sessionId
+          })
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+
+          const reconstructedMessages = [
+            { text: "Hi, I'm Karthikeyan K, How may i help you", sender: "bot" }
+          ];
+
+          if (data.messages && Array.isArray(data.messages)) {
+            data.messages.forEach((msg) => {
+              if (msg.role === "human") {
+                reconstructedMessages.push({ text: msg.content, sender: "user" });
+              } else if (msg.role === "ai" && msg.content) {
+                const splits = msg.content.split("|split|");
+                splits.forEach((splitContent) => {
+                  if (splitContent.trim()) {
+                    reconstructedMessages.push({ text: splitContent.trim(), sender: "bot" });
+                  }
+                });
+              }
+            });
+          }
+          setMessages(reconstructedMessages);
+        } else {
+          setMessages((prev) => prev.filter((msg) => !msg.isLoadingMessage));
+        }
+      } catch (error) {
+        console.error("Chatbot API error:", error);
+        setMessages((prev) => prev.filter((msg) => !msg.isLoadingMessage));
+      } finally {
+        setIsLoading(false);
+      }
     }
   };
 
@@ -187,8 +238,9 @@ const Chatbot = () => {
               onChange={(e) => setInput(e.target.value)}
               onKeyPress={handleKeyPress}
               placeholder="Type a message..."
+              disabled={isLoading}
             />
-            <SendButton onClick={sendMessage}>
+            <SendButton onClick={sendMessage} disabled={isLoading}>
               <ChatIcon style={{ fontSize: "16px" }} />
             </SendButton>
           </ChatInputContainer>
