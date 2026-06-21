@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { trackEvent } from "../../utils/analytics";
 
 const Card = styled.div`
   width: 330px;
@@ -104,8 +105,16 @@ const Avatar = styled.img`
 // `;
 
 const ProjectCard = ({ project, setOpenModal }) => {
+  const handleProjectOpen = () => {
+    trackEvent("Project details open", {
+      project: project.title,
+      category: project.category,
+    });
+    setOpenModal({ state: true, project: project });
+  };
+
   return (
-    <Card onClick={() => setOpenModal({ state: true, project: project })}>
+    <Card onClick={handleProjectOpen}>
       <Image src={project.image} />
       <Tags>
         {project.tags?.map((tag, index) => (

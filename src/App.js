@@ -14,7 +14,8 @@ import Footer from "./components/sections/Footer";
 import ProjectDetails from "./components/Dialog/ProjectDetails";
 import Certifications from "./components/sections/Certifiactions";
 import Chatbot from "./components/sections/Chatbot";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { getLandingSource, trackEvent } from "./utils/analytics";
 
 
 const Body = styled.div`
@@ -42,6 +43,19 @@ const Wrapper = styled.div`
 
 function App() {
   const [openModal, setOpenModal] = useState({ state: false, project: null });
+
+  useEffect(() => {
+    const landingSource = getLandingSource();
+    const trackedKey = "portfolio_landing_source_tracked";
+
+    if (!landingSource || sessionStorage.getItem(trackedKey)) {
+      return;
+    }
+
+    trackEvent("Portfolio landing", landingSource);
+    sessionStorage.setItem(trackedKey, "true");
+  }, []);
+
   return (
     <ThemeProvider theme={darkTheme}>
       <BrowserRouter>

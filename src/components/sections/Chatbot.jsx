@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled, { useTheme } from "styled-components";
 import { TbMessageChatbotFilled } from "react-icons/tb";
+import { trackEvent } from "../../utils/analytics";
 
 const ChatbotContainer = styled.div`
   position: fixed;
@@ -135,12 +136,14 @@ const Chatbot = () => {
   const chatBodyRef = useRef(null); // Reference for auto-scrolling
 
   const toggleChatbot = () => {
+    trackEvent(isOpen ? "Chatbot close" : "Chatbot open");
     setIsOpen(!isOpen);
   };
 
   const sendMessage = async () => {
     if (input.trim() && !isLoading) {
       const userMessage = input.trim();
+      trackEvent("Chatbot message sent");
       setInput("");
       setIsLoading(true);
 

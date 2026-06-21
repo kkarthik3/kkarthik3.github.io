@@ -2,6 +2,7 @@ import { CloseRounded, GitHub, LinkedIn } from "@mui/icons-material";
 import { Modal } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
+import { trackEvent } from "../../utils/analytics";
 
 const Container = styled.div`
   width: 100%;
@@ -182,6 +183,13 @@ const Button = styled.a`
 
 const ProjectDetails = ({ openModal, setOpenModal }) => {
   const project = openModal?.project;
+  const trackProjectLink = (type) => {
+    trackEvent("Project link click", {
+      project: project?.title,
+      type,
+    });
+  };
+
   return (
     <Modal
       open={true}
@@ -235,10 +243,10 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
             </>
           )}
           <ButtonGroup>
-            <Button dull href={project?.github} target="new">
+            <Button dull href={project?.github} target="new" onClick={() => trackProjectLink("code")}>
               View Code
             </Button>
-            <Button href={project?.webapp} target="new">
+            <Button href={project?.webapp} target="new" onClick={() => trackProjectLink("live_app")}>
               View Live App
             </Button>
           </ButtonGroup>

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Bio } from "../../data/constants";
 import { SiGmail } from "react-icons/si";
 import { FaGithub,FaLinkedin,FaWhatsapp } from "react-icons/fa";
+import { trackEvent } from "../../utils/analytics";
 
 const Title = styled.div`
   font-size: 20px;
@@ -120,6 +121,10 @@ const Wrapper = styled.div`
 `;
 
 const Footer = () => {
+  const trackFooterClick = (platform) => {
+    trackEvent("Social link click", { location: "footer", platform });
+  };
+
   return (
     <FooterContainer>
       <FooterWrapper>
@@ -131,7 +136,7 @@ const Footer = () => {
         </>
         <Title>Feel free to reach me on</Title>
         <SocialMediaIcons>
-          <SocialMediaIcon href={Bio.linkedin} target="display">
+          <SocialMediaIcon href={Bio.linkedin} target="display" onClick={() => trackFooterClick("linkedin")}>
             <FaLinkedin />
           </SocialMediaIcon>
           
@@ -139,10 +144,10 @@ const Footer = () => {
           {/* <SocialMediaIcon href={`https://wa.me/${Bio.mobile}`} target="display">
             <FaWhatsapp />
           </SocialMediaIcon> */}
-          <SocialMediaIcon href={`mailto:${Bio.mail}`} target="display">
+          <SocialMediaIcon href={`mailto:${Bio.mail}`} target="display" onClick={() => trackFooterClick("email")}>
             <SiGmail />
           </SocialMediaIcon>
-          <SocialMediaIcon href={Bio.github} target="display">
+          <SocialMediaIcon href={Bio.github} target="display" onClick={() => trackFooterClick("github")}>
             <FaGithub />
           </SocialMediaIcon>
         </SocialMediaIcons>

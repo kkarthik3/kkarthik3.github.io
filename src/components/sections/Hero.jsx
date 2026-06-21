@@ -17,6 +17,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub, faKaggle} from '@fortawesome/free-brands-svg-icons';
 import { IoIosMail } from "react-icons/io";
 import { SiLeetcode } from "react-icons/si";
+import { trackEvent } from "../../utils/analytics";
 
 const HeroContainer = styled.div`
   display: flex;
@@ -272,6 +273,10 @@ const YOE = styled.div`
 
 
 const Hero = () => {
+  const trackSocialClick = (platform) => {
+    trackEvent("Social link click", { location: "hero", platform });
+  };
+
   return (
     <div id="About">
       <HeroContainer>
@@ -306,25 +311,25 @@ const Hero = () => {
                 {/* <SubTitle>{Bio.description}</SubTitle> */}
                                 {/* Social Media Links Section */}
                   <SocialLinks>
-                  <a href={Bio.linkedin} className="linkedin" target="_blank" rel="noopener noreferrer">
+                  <a href={Bio.linkedin} className="linkedin" target="_blank" rel="noopener noreferrer" onClick={() => trackSocialClick("linkedin")}>
                     <FontAwesomeIcon icon={faLinkedin} size="lg" />
                   </a>
-                  <a href={Bio.github} className="github" target="_blank" rel="noopener noreferrer">
+                  <a href={Bio.github} className="github" target="_blank" rel="noopener noreferrer" onClick={() => trackSocialClick("github")}>
                     <FontAwesomeIcon icon={faGithub} size="lg"/>
                   </a>
-                  <a href={Bio.kaggle} className="kaggle" target="_blank" rel="noopener noreferrer">
+                  <a href={Bio.kaggle} className="kaggle" target="_blank" rel="noopener noreferrer" onClick={() => trackSocialClick("kaggle")}>
                     <FontAwesomeIcon icon={faKaggle} size="lg"/>
                   </a>
-                  <a href={Bio.leetcode} className="leetcode" target="_blank" rel="noopener noreferrer">
+                  <a href={Bio.leetcode} className="leetcode" target="_blank" rel="noopener noreferrer" onClick={() => trackSocialClick("leetcode")}>
                     <SiLeetcode size={30}/>
                   </a>
-                  <a href={`mailto:${Bio.mail}`} className="Gmail" target="_blank" rel="noopener noreferrer">
+                  <a href={`mailto:${Bio.mail}`} className="Gmail" target="_blank" rel="noopener noreferrer" onClick={() => trackSocialClick("email")}>
                     <IoIosMail size={32}/>
                   </a>
                 </SocialLinks>
               </motion.div>
 
-              <ResumeButton href={Bio.resume} target="_blank">
+              <ResumeButton href={Bio.resume} target="_blank" onClick={() => trackEvent("Resume click", { location: "hero" })}>
                 Check Resume
               </ResumeButton>
 
