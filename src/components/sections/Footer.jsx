@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Bio } from "../../data/constants";
 import { SiGmail } from "react-icons/si";
-import { FaGithub,FaLinkedin,FaWhatsapp } from "react-icons/fa";
+import { FaGithub,FaLinkedin } from "react-icons/fa";
 import { trackEvent } from "../../utils/analytics";
 
 const Title = styled.div`

@@ -9,7 +9,7 @@ const Container = styled.div`
 margin-top: 100px;
 display: flex;
 flex-direction: column;
-justify-content-center;
+justify-content: center;
 position: relative;
 z-index: 1;
 align-items: center;

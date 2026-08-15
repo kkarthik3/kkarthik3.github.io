@@ -12,7 +12,7 @@ import Projects from "./components/sections/Projects";
 // import Contact from "./components/sections/Contact";
 import Footer from "./components/sections/Footer";
 import ProjectDetails from "./components/Dialog/ProjectDetails";
-import Certifications from "./components/sections/Certifiactions";
+import Certifications from "./components/sections/Certifications";
 import Chatbot from "./components/sections/Chatbot";
 import { useEffect, useState } from "react";
 import { getLandingSource, trackEvent } from "./utils/analytics";
