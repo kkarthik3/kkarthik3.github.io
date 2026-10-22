@@ -5,21 +5,21 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-npm start          # Dev server at http://localhost:3000
+npm start          # Vite dev server at http://localhost:3000
 npm run build      # Production build → /build
-npm test           # Run tests (react-scripts/Jest)
+npm run preview    # Serve the production build locally
 npm run deploy     # Runs predeploy (build) then gh-pages -d build
 ```
 
-No linter script is configured; ESLint is embedded in `react-scripts` and runs automatically during `start`/`build`.
+No test or lint setup is configured.
 
 ## Architecture
 
-Single-page React 18 app bootstrapped with Create React App. No Vite or custom Webpack config — everything goes through `react-scripts`.
+Single-page React 18 app built with Vite (`vite.config.js`, `@vitejs/plugin-react`). Entry is `index.html` at the repo root, which loads `src/index.jsx`. Files containing JSX must use the `.jsx` extension.
 
-**Rendering model:** One long-scroll page. `App.js` composes all sections in order; React Router (`BrowserRouter`) is present but used only for context, not for route-based navigation.
+**Rendering model:** One long-scroll page. `App.jsx` composes all sections in order; There is no router.
 
-**Section order in `App.js`:**
+**Section order in `App.jsx`:**
 Hero → Skills → Experience → Projects → Education → Certifications → Footer
 
 `Contact` and `StarCanvas` are imported but commented out.
@@ -38,7 +38,7 @@ Hero → Skills → Experience → Projects → Education → Certifications →
 | `src/utils/Themes.js` | `darkTheme` / `lightTheme` token objects (bg, primary, card, text colours) |
 | `src/utils/motion.js` | Framer Motion variant presets (slideAnimation, fadeAnimation, head*Animation) |
 | `src/utils/analytics.js` | Umami analytics wrapper — `trackEvent()` and `getLandingSource()` |
-| `public/` | Static assets: resume PDF/DOCX, project screenshots, Hero image, Nginx-served `index.html` |
+| `public/` | Static assets copied as-is: resume PDF/DOCX, project screenshots, Hero image |
 
 ### Styling approach
 
@@ -54,16 +54,16 @@ Framer Motion `AnimatePresence` wraps the main content. Shared animation variant
 
 ### Project modal
 
-`openModal` state (`{ state: boolean, project: object | null }`) lives in `App.js` and is passed down to `Projects` and `ProjectDetails`. Clicking a project card sets `openModal`; the modal conditionally renders when `openModal.state === true`.
+`openModal` state (`{ state: boolean, project: object | null }`) lives in `App.jsx` and is passed down to `Projects` and `ProjectDetails`. Clicking a project card sets `openModal`; the modal conditionally renders when `openModal.state === true`.
 
 ### Analytics
 
-Umami (`window.umami`) is injected via a script tag in `public/index.html`. `trackEvent` silently no-ops when Umami isn't loaded. Landing-source tracking fires once per session (guarded by `sessionStorage`).
+Umami (`window.umami`) is injected via a script tag in `index.html`. `trackEvent` silently no-ops when Umami isn't loaded. Landing-source tracking fires once per session (guarded by `sessionStorage`).
 
 ### Deployment
 
 - **GitHub Pages:** `npm run deploy` (gh-pages writes to the `gh-pages` branch; homepage is `https://kkarthik3.github.io`).
-- **Docker/Nginx:** `Dockerfile` does a multi-stage build (Node 18 → nginx:latest) with a custom `portfolio.conf` Nginx config. Port 80. The Docker path is for self-hosted deployment and is separate from the GH Pages flow.
+- **Docker/Nginx:** `Dockerfile` does a multi-stage build (Node 22 → nginx:latest) with a custom `portfolio.conf` Nginx config. Port 80. The Docker path is for self-hosted deployment and is separate from the GH Pages flow.
 
 ## Content updates
 

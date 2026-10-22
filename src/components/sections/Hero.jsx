@@ -13,8 +13,7 @@ import {
 } from "../../utils/motion";
 import StarCanvas from "../canvas/Stars";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub, faKaggle} from '@fortawesome/free-brands-svg-icons';
+import { FaLinkedin, FaGithub, FaKaggle } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { SiLeetcode } from "react-icons/si";
 import { trackEvent } from "../../utils/analytics";
@@ -312,13 +311,13 @@ const Hero = () => {
                                 {/* Social Media Links Section */}
                   <SocialLinks>
                   <a href={Bio.linkedin} className="linkedin" target="_blank" rel="noopener noreferrer" onClick={() => trackSocialClick("linkedin")}>
-                    <FontAwesomeIcon icon={faLinkedin} size="lg" />
+                    <FaLinkedin size="1.33em" />
                   </a>
                   <a href={Bio.github} className="github" target="_blank" rel="noopener noreferrer" onClick={() => trackSocialClick("github")}>
-                    <FontAwesomeIcon icon={faGithub} size="lg"/>
+                    <FaGithub size="1.33em" />
                   </a>
                   <a href={Bio.kaggle} className="kaggle" target="_blank" rel="noopener noreferrer" onClick={() => trackSocialClick("kaggle")}>
-                    <FontAwesomeIcon icon={faKaggle} size="lg"/>
+                    <FaKaggle size="1.33em" />
                   </a>
                   <a href={Bio.leetcode} className="leetcode" target="_blank" rel="noopener noreferrer" onClick={() => trackSocialClick("leetcode")}>
                     <SiLeetcode size={30}/>
