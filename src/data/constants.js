@@ -35,7 +35,7 @@ export const skills = [
       {
         name: "Tensorflow",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tensorflow_logo.svg/449px-Tensorflow_logo.svg.png",
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAIAAAD9b0jDAAABOklEQVR4Ad3VAUcEQRgG4O+f3B86uL9wAASyWFxH5+juKNZaCwHsIiJSlyQlS+GgDi0JWUCOQIS3XuujmNmRG5b7vMbHmMeYGUYA/9Ui+vWJ56ufsPGDPmQYCM52mJFgka2Hvtxjr0NxV3AxxuUYE2HSDl6L/6OrCmkPATmM/qIHDGaCox4+Kieqx3c8xJYgFAwsaCSIGfY3Qy5pQu9ycoGKzWgiSHVc5hb06Rp9FZ1opNwhw/7t1oLqNhkeqB1N2CjKxoXWB/o45+2HJnQmnCrnpBMn2qeI0ynqKgsrqk8KxRRxM7rf5WMCmlHmfBtafFgnXW7cgOrLcKORjsvcuFxgKQca61392qAnNOJR+kMZn6je/iJj4xmtL+e99IpqbTIamNDJOuiq4ncSGr4TTvn/+Nr/op3VGvoNSNDSTS8UeOYAAAAASUVORK5CYII=",
       },
       {
         name: "Keras",
@@ -45,7 +45,7 @@ export const skills = [
       {
         name: "Jupyter",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1767px-Jupyter_logo.svg.png",
+          "https://jupyter.org/assets/jupyter/logo/rectanglelogo-greytext-orangebody-greymoons.svg",
       },
       {
         name: "Google Colab",
@@ -55,12 +55,12 @@ export const skills = [
       {
         name: "scikit-learn",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/2560px-Scikit_learn_logo_small.svg.png",
+          "https://scikit-learn.org/stable/_static/scikit-learn-logo-without-subtitle.svg",
       },
       {
         name: "Streamlit",
         image:
-          "https://seeklogo.com/images/S/streamlit-logo-1A3B208AE4-seeklogo.com.png",
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAApVBMVEX////ox8j89/e5Ky//1tbIa2y7OTzi19f/S0vkvb29QEONVFj/vb3/CQn/AAD/YWH/4uLq4uOXZmpxFB5zHCXQvb7/Kyv/ISH/cnL/6+vx7Oyhdnl5LTN9NTv/fn7/Hh6qhoj/EhLnMjS7QEN8Ji3/Pz/jODq1QER8MjiEREn/rq7/FxfaOz2ePULFra//eXn8Li/RPkD2MjLwAAD/xMT/mpr/iopqCY8wAAAA00lEQVR4AdXOhQkDARBE0Y3rubu7a/+lZS+uBeThfBgG/ths9rvNF4s5PFvCw2q9XsHDBrbbe94t9vvF7p4OBzgSJEVfR/foOsywHC8AkKJEysp5dIrnYVXjdIMDANMSMZtzHEXT8NzGZOg2xiUpIstx996lrn3dQPwGUCBehd4lR1OLE5ikmXiTX3KB0S9hMsfdR46mjJGbw1klPdUaMw7rGlwsCfFZ3UT7Au9c1eKrtvFiuDmSJOFkliUhy8ocgux28KAs+3QYzaoyxyHtlwr8oRMZNBhjwrwsVAAAAABJRU5ErkJggg==",
       },
     ],
   },
@@ -211,11 +211,6 @@ export const skills = [
         image:
           "data:image/png;base64,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",
       },
-      {
-        name: "Beanstalk",
-        image:
-          "https://seeklogo.com/images/A/aws-elastic-beanstalk-logo-BA204C47D0-seeklogo.com.png",
-      },
     ],
   },
   {
@@ -229,7 +224,7 @@ export const skills = [
       {
         name: "Langchain",
         image:
-          "https://opensource.muenchen.de/logo/langchain.jpg",
+          "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/6989c024409fcfc7e5b8f78f_Frame%202147254707-1.svg",
       },
       {
         name: "Huggingface",
@@ -244,7 +239,7 @@ export const skills = [
       {
         name: "Langgraph",
         image:
-          "https://langchain-ai.github.io/langgraph/static/wordmark_light.svg",
+          "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/6989c024c2d98286a8fb058f_Frame%202147255166-1.svg",
       },
     ],
   },
@@ -269,7 +264,7 @@ export const skills = [
       {
         name: "VS Code",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAhFBMVEVHcEwAesEAfcMKjtoAcccAe8IYnucAaK4AfMMAc7gAi9MAdLkAfcIUk90Ai9QAaKwkrfQAeL8AfcQAfMUKjNkfnvAms/MYltcjqfIho/IAbbEAdbcAeLogoPEAg9AipvIAhtEAjNQlsPMAgM8mtPUAidMkrPIkrvMAfcwAjtUAerwAkNXfBl+DAAAAGHRSTlMA2GWK/ggn/j6SnyYdEuHolrxO6fG6uvBYp4CfAAABBUlEQVQokX3T23KCMBCA4UXEBESQ1h4MqBxrAu//ft3NhoLA9L9i8s2EIVkA1oVf59PGsi3rVdt+HjbN6wk3OXjvCWusPS/shNQXwmJdv9qxsM1w2lsWS/SHS8z25iwX7dMGkTGD2ZHtaB0rPHg6NNgwRPjpuSsE+OFAVpgxSaicSZgQDhWXCyIvoDd8c/gUMxotFG35ihAkHVWVQsIa07Lj1hgrJZquK7EuYnxweGQKE7rkkmCOUllMI2v3eylnaE1leIx3lw9w5SAk4+Mb1ftD1HQ8eIfN/jEiHKcraziHt8VlW9P76822HBP9D+KAaT2iv0QcTUSij83JzQi3CQsv7nf4BV/QMRepMTOQAAAAAElFTkSuQmCC",
       },
       {
         name: "Postman",
